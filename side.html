@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Sidebar</title>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="jquery-2.1.4.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#sidebutt").click(function(){
+	$(".sidebar").toggleClass('none');
+	$('h2').toggleClass('h2show');
+	});
+	});
+
+
+</script>
+<style>
+*{
+margin:0;
+padding:0;
+font-family: 'Oswald', sans-serif;
+}
+#sidebutt{
+		position:absolute;
+         top:15px;
+		color:black;
+		right:-40px;
+		transition: margin 0.7s ease-in-out;
+	    -webkit-transition:-webkit-transform 0.8s;
+		}
+		
+		.sidebar{
+     position:absolute;
+	 top:0px;
+	text-align:center;
+	min-height:667px;
+	width:200px;
+	height:auto;
+	background:#B0171F;
+	margin-left:-200px;
+	transition: margin 0.7s ease-in-out;
+	}
+	.none{
+	margin-left:0px;
+	
+}
+.h2show{
+	margin-left:0px;
+}
+ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	margin-top:40px;
+}
+li{
+	padding:30px;
+	text-align:center;
+	border-bottom:2px solid black;
+	color:white;
+	
+	text-shadow:rgb(110,110,110) 3px 3px 5px;
+}
+h2{
+
+	text-shadow:rgb(0,0,0) 7px 7px 10px;
+	color:white;
+	font:bold 30px Tahoma;
+	margin-left:-353px;
+	transition: margin 0.3s ease-in-out;
+	}
+	#sublist{
+		display:none;
+		
+	}
+	#sublisttag:hover>#sublist{
+	display:block;
+	}
+	#sidebutt:hover{
+	-webkit-transform:rotate(360deg);
+	color:#292421;
+	}
+	li:hover{
+		padding-right:2px;
+		transition: padding 0.2s ease-in-out;
+		color:#FFD700;
+		font:20px Tahoma;
+	text-shadow:rgb(0,0,0) 3px 3px 5px;
+	}
+	a{
+		text-decoration:none;
+	}
+	h2:hover{
+		padding-left:10px;
+		transition: padding 0.2s ease-in-out;
+	}
+	#sublist>li{
+		border:none;
+		background:white;
+		color:black;
+	}
+	#sublist{
+		border-bottom:none;
+		}
+</style>
+</head>
+<body>
+	<div class="sidebar">
+	<a id="sidebutt"><i class="fa fa-bars fa-2x"></i></a>
+	<h2>SIDEBAR</h2>
+	<ul>
+		<a ><a href="#"><li><i class="fa fa-cart-arrow-down fa-2x"></i>&nbsp;Products</li></a>
+		<li id="sublisttag"><i class="fa fa-cogs fa-2x"></i>&nbsp;Services
+		<ul id="sublist">
+			<a href="#"><li><i class="fa fa-bus fa-2x"></i>&nbsp;Bus</li></a>
+			<a href="#"><li><i class="fa fa-train fa-2x"></i>&nbsp;Rail</li></a>
+			<a href="#"><li><i class="fa fa-plane fa-2x"></i>&nbsp;Flight</li></a>
+			<a href="#"><li><i class="fa fa-bed fa-2x"></i>&nbsp;Hotel</li></a>
+		</ul></li>
+		<a href="#"><li><i class="fa fa-comments fa-2x"></i>&nbsp;Feedback</li></a>
+		<a href="#"><li><i class="fa fa-user fa-2x"></i>&nbsp;About Us</li></a>
+		<a href="#"><li><i class="fa fa-phone fa-2x"></i>&nbsp;Contact Us</li></a>
+		</ul>
+    </div>
+</body>
+</html>
